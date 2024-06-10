@@ -1,4 +1,4 @@
-# Dockerfile
+![image](https://github.com/JohanI18/2024A-ISWD633-Practica4/assets/119013850/9937dfbc-f7bc-4b18-bbcc-ff3457afa085)# Dockerfile
 Un Dockerfile es un archivo de texto plano que contiene una serie de instrucciones que Docker utiliza para construir una imagen de contenedor Docker. Este conjunto de instrucciones define cómo se debe configurar y construir una imagen de contenedor, incluyendo qué sistema operativo base usar, qué software instalar, qué archivos copiar en el contenedor y cómo configurar el entorno de ejecución.
 Las instrucciones en un Dockerfile son simples y están diseñadas para ser leídas y comprendidas fácilmente. 
 
@@ -50,17 +50,27 @@ La opción -t se utiliza para etiquetar la imagen que se está construyendo con 
 
  
 ### Ejecutar el archivo Dockerfile y construir una imagen en la versión 1.0
-```
 
+```
+docker build -t nombre_imagen:1.0 -f Dockerfile .
 ```
 
 **¿Cuántos pasos se han ejecutado?**
 
+16
+
+![mapeo](imagenes/micentos.png)
+
 ### Inspeccionar la imagen creada
-# COMPLETAR CON UNA CAPTURA
+
+![mapeo](imagenes/inspectmicentos.png)
 
 **Modificar el archivo index.html para incluir su nombre**
 **¿Cuántos pasos se han ejecutado? ¿Observa algo diferente en la creación de la imagen**
+
+16
+
+![mapeo](imagenes/micentos2.png)
 
 ## Mecanismo de caché
 Docker usa un mecanismo de caché cuando crea imágenes para acelerar el proceso de construcción y evitar la repetición de pasos que no han cambiado. Cada instrucción en un Dockerfile crea una capa en la imagen final. Docker intenta reutilizar las capas de una construcción anterior si no han cambiado, lo que reduce significativamente el tiempo de construcción.
