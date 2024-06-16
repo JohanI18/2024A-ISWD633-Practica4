@@ -72,6 +72,8 @@ docker build -t nombre_imagen:1.0 -f Dockerfile .
 
 ![mapeo](imagenes/micentos2.png)
 
+![mapeo](imagenes/html-changed.png)
+
 ## Mecanismo de caché
 Docker usa un mecanismo de caché cuando crea imágenes para acelerar el proceso de construcción y evitar la repetición de pasos que no han cambiado. Cada instrucción en un Dockerfile crea una capa en la imagen final. Docker intenta reutilizar las capas de una construcción anterior si no han cambiado, lo que reduce significativamente el tiempo de construcción.
 
@@ -82,28 +84,30 @@ Docker usa un mecanismo de caché cuando crea imágenes para acelerar el proceso
 
 ### Crear un contenedor a partir de las imagen creada, mapear todos los puertos
 ```
-
+docker run -d --name my-centos -P centos:2.0
 ```
 
 ### ¿Con que puerto host se está realizando el mapeo?
-# COMPLETAR CON LA RESPUESTA
+
+32768
 
 **¿Qué es una imagen huérfana?**
-# COMPLETAR CON LA RESPUESTA
+
+Una imagen huérfana en Docker es una imagen que no está asociada a ningún contenedor, es decir, es una imagen que no tiene ningún contenedor basado en ella en ejecución o detenido. Estas imágenes suelen ocupar espacio en tu sistema y pueden acumularse con el tiempo si no se gestionan adecuadamente.
 
 ### Identificar imágenes huérfanas
 ```
-
+docker images -f dangling=true
 ```
 
 ### Listar los IDS de las imágenes huérfanas
 ```
-
+docker images -f dangling=true -q
 ```
 
 ### Eliminar imágenes huérfanas
 ```
-
+docker rmi $(docker images -f dangling=true -q)
 ```
 
 ### Ejecutar un archivo Dockerfile que tiene otro nombre
