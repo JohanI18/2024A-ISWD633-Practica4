@@ -1,4 +1,4 @@
-![image](https://github.com/JohanI18/2024A-ISWD633-Practica4/assets/119013850/9937dfbc-f7bc-4b18-bbcc-ff3457afa085)# Dockerfile
+# Dockerfile
 Un Dockerfile es un archivo de texto plano que contiene una serie de instrucciones que Docker utiliza para construir una imagen de contenedor Docker. Este conjunto de instrucciones define cómo se debe configurar y construir una imagen de contenedor, incluyendo qué sistema operativo base usar, qué software instalar, qué archivos copiar en el contenedor y cómo configurar el entorno de ejecución.
 Las instrucciones en un Dockerfile son simples y están diseñadas para ser leídas y comprendidas fácilmente. 
 
